@@ -22,6 +22,8 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 
+vim.o.termguicolors = true;
+
 " }}}
 " Global Settings: {{{
 
@@ -85,51 +87,50 @@ let s:is_dark=(&background == 'dark')
 " setup palette dictionary
 let s:gb = {}
 
-" fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:gb.dark0       = ['#282828', 235]     " 40-40-40
-let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
-let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
-let s:gb.dark2       = ['#504945', 239]     " 80-73-69
-let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
-let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
-let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
+let s:gb.dark0_hard  = ['#1A1A1A', 234]   
+let s:gb.dark0       = ['#2A2A2A', 235]   
+let s:gb.dark0_soft  = ['#303030', 236]   
+let s:gb.dark1       = ['#292929', 237]
+let s:gb.dark2       = ['#504945', 239]   
+let s:gb.dark3       = ['#363636', 241]
+let s:gb.dark4       = ['#7c6f64', 243]   
+let s:gb.dark4_256   = ['#7c6f64', 243]
 
-let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
-let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
+let s:gb.gray_245    = ['#928374', 245]
+let s:gb.gray_244    = ['#928374', 244]
 
-let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
-let s:gb.light0      = ['#fbf1c7', 229]     " 253-244-193
-let s:gb.light0_soft = ['#f2e5bc', 228]     " 242-229-188
-let s:gb.light1      = ['#ebdbb2', 223]     " 235-219-178
-let s:gb.light2      = ['#d5c4a1', 250]     " 213-196-161
-let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
-let s:gb.light4      = ['#a89984', 246]     " 168-153-132
-let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
+let s:gb.light0_hard = ['#fbf1c7', 230]
+let s:gb.light0      = ['#fbf1c7', 229]   
+let s:gb.light0_soft = ['#d4be98', 228]   
+let s:gb.light1      = ['#d4be98', 223]
+let s:gb.light2      = ['#d4be98', 250]
+let s:gb.light3      = ['#d4be98', 248]
+let s:gb.light4      = ['#a89984', 246]   
+let s:gb.light4_256  = ['#a89984', 246]
 
-let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
-let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
-let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
-let s:gb.bright_purple  = ['#d3869b', 175]     " 211-134-155
-let s:gb.bright_aqua    = ['#8ec07c', 108]     " 142-192-124
-let s:gb.bright_orange  = ['#fe8019', 208]     " 254-128-25
+let s:gb.bright_red     = ['#ea6962', 167]
+let s:gb.bright_green   = ['#a9b665', 142]
+let s:gb.bright_yellow  = ['#d8a657', 214]
+let s:gb.bright_blue    = ['#7daea3', 109]
+let s:gb.bright_purple  = ['#d3869b', 175]
+let s:gb.bright_aqua    = ['#89b482', 108]
+let s:gb.bright_orange  = ['#e78a4e', 208]
 
-let s:gb.neutral_red    = ['#cc241d', 124]     " 204-36-29
-let s:gb.neutral_green  = ['#98971a', 106]     " 152-151-26
-let s:gb.neutral_yellow = ['#d79921', 172]     " 215-153-33
-let s:gb.neutral_blue   = ['#458588', 66]      " 69-133-136
-let s:gb.neutral_purple = ['#b16286', 132]     " 177-98-134
-let s:gb.neutral_aqua   = ['#689d6a', 72]      " 104-157-106
-let s:gb.neutral_orange = ['#d65d0e', 166]     " 214-93-14
+let s:gb.neutral_red    = ['#ea6962', 124]
+let s:gb.neutral_green  = ['#a9b665', 106]
+let s:gb.neutral_yellow = ['#d8a657', 172]
+let s:gb.neutral_blue   = ['#7daea3',  66]
+let s:gb.neutral_purple = ['#d3869b', 132]
+let s:gb.neutral_aqua   = ['#89b482',  72]
+let s:gb.neutral_orange = ['#e78a4e', 166]
 
-let s:gb.faded_red      = ['#9d0006', 88]      " 157-0-6
-let s:gb.faded_green    = ['#79740e', 100]     " 121-116-14
-let s:gb.faded_yellow   = ['#b57614', 136]     " 181-118-20
-let s:gb.faded_blue     = ['#076678', 24]      " 7-102-120
-let s:gb.faded_purple   = ['#8f3f71', 96]      " 143-63-113
-let s:gb.faded_aqua     = ['#427b58', 66]      " 66-123-88
-let s:gb.faded_orange   = ['#af3a03', 130]     " 175-58-3
+let s:gb.faded_red      = ['#ea6962',  88]
+let s:gb.faded_green    = ['#a9b665', 100]
+let s:gb.faded_yellow   = ['#d8a657', 136]
+let s:gb.faded_blue     = ['#7daea3',  24]
+let s:gb.faded_purple   = ['#d3869b',  96]
+let s:gb.faded_aqua     = ['#89b482',  66]
+let s:gb.faded_orange   = ['#e78a4e', 130]
 
 " }}}
 " Setup Emphasis: {{{
