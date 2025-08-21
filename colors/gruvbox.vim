@@ -22,7 +22,6 @@ if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 
   finish
 endif
 
-vim.o.termguicolors = true;
 
 " }}}
 " Global Settings: {{{
