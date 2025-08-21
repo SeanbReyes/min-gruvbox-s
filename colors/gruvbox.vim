@@ -87,7 +87,7 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 let s:gb.dark0_hard  = ['#1A1A1A', 234]   
-let s:gb.dark0       = ['#2A2A2A', 235]   
+let s:gb.dark0       = ['#1A1A1A', 235]   
 let s:gb.dark0_soft  = ['#303030', 236]   
 let s:gb.dark1       = ['#292929', 237]
 let s:gb.dark2       = ['#504945', 239]   
