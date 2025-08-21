@@ -86,27 +86,29 @@ let s:is_dark=(&background == 'dark')
 " setup palette dictionary
 let s:gb = {}
 
-let s:gb.dark0_hard  = ['#1A1A1A', 234]   
-let s:gb.dark0       = ['#1A1A1A', 235]   
-let s:gb.dark0_soft  = ['#303030', 236]   
+let s:gb.dark0_hard  = ['#1A1A1A', 234]
+let s:gb.dark0       = ['#1A1A1A', 235]
+let s:gb.dark0_soft  = ['#303030', 236]
 let s:gb.dark1       = ['#292929', 237]
-let s:gb.dark2       = ['#504945', 239]   
+let s:gb.dark2       = ['#504945', 239]
 let s:gb.dark3       = ['#363636', 241]
-let s:gb.dark4       = ['#7c6f64', 243]   
+let s:gb.dark4       = ['#7c6f64', 243]
 let s:gb.dark4_256   = ['#7c6f64', 243]
 
 let s:gb.gray_245    = ['#928374', 245]
 let s:gb.gray_244    = ['#928374', 244]
 
-let s:gb.light0_hard = ['#fbf1c7', 230]
-let s:gb.light0      = ['#fbf1c7', 229]   
-let s:gb.light0_soft = ['#d4be98', 228]   
-let s:gb.light1      = ['#d4be98', 223]
-let s:gb.light2      = ['#d4be98', 250]
-let s:gb.light3      = ['#d4be98', 248]
-let s:gb.light4      = ['#a89984', 246]   
-let s:gb.light4_256  = ['#a89984', 246]
+" Foregrounds
+let s:gb.light0_hard = ['#fbf1c7', 230]  " Foreground
+let s:gb.light0      = ['#fbf1c7', 229]  " Foreground
+let s:gb.light0_soft = ['#d4be98', 228]  " Foreground 0
+let s:gb.light1      = ['#d4be98', 223]  " Foreground 0
+let s:gb.light2      = ['#d4be98', 250]  " Foreground 0
+let s:gb.light3      = ['#d4be98', 248]  " Foreground 0
+let s:gb.light4      = ['#a89984', 246]  " Foreground 1
+let s:gb.light4_256  = ['#a89984', 246]  " Foreground 1
 
+" Accents — same set for bright/neutral/faded
 let s:gb.bright_red     = ['#ea6962', 167]
 let s:gb.bright_green   = ['#a9b665', 142]
 let s:gb.bright_yellow  = ['#d8a657', 214]
